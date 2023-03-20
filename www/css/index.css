@@ -1,0 +1,147 @@
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+
+
+.app {
+    background: url(../img/logo.png) no-repeat center top;
+    /* 170px x 200px */
+    position: absolute;
+    /* position in the center of the screen */
+    left: 50%;
+    top: 50%;
+    height: 50px;
+    /* text area height */
+    width: 225px;
+    /* text area width */
+    text-align: center;
+    padding: 180px 0px 0px 0px;
+    /* image height is 200px (bottom 20px are overlapped with text) */
+    margin: -115px 0px 0px -112px;
+    /* offset vertical: half of image height and text area height */
+    /* offset horizontal: half of text area width */
+}
+
+#encabezado {
+    width: 100%;
+    height: 10%;
+    background-color: rgb(0, 132, 255);
+    color: white;
+    margin-bottom: 10px;
+}
+
+.redondo {
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-top: 50px;
+    float: right;
+}
+
+#central {
+    width: 75%;
+    height: 75%;
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px gray;
+    float: center;
+    background-color: #14fc71;
+    color: black;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+@media screen and (min-aspect-ratio: 1/1) and (min-width:1000px) {}
+
+@media (max-width:320px) {
+    #tamaño {
+        font-size: 20px;
+    }
+
+    #pie {
+        width: 99%;
+        height: 100px;
+        background-color: rgb(0, 132, 255);
+        color: white;
+        margin-bottom: 10px;
+        position: relative;
+    }
+}
+
+#pie {
+    background-color: rgb(0, 132, 255);
+    color: white;
+    margin-bottom: 10px;
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    width: 99%;
+    height: 10%;
+}
+
+
+h1 {
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0px;
+    overflow: visible;
+    padding: 0px;
+    text-align: center;
+}
+
+
+
+.event {
+    border-radius: 4px;
+    color: #FFFFFF;
+    font-size: 12px;
+    margin: 0px 30px;
+    padding: 2px 0px;
+}
+
+.event.listening {
+    background-color: #333333;
+    display: block;
+}
+
+.event.received {
+    background-color: #4B946A;
+    display: none;
+}
+
+#deviceready.ready .event.listening {
+    display: none;
+}
+
+#deviceready.ready .event.received {
+    display: block;
+}
+
+@keyframes fade {
+    from {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1.0;
+    }
+}
+
+.blink {
+    animation: fade 3000ms infinite;
+    -webkit-animation: fade 3000ms infinite;
+}
+
+
+@media screen and (prefers-color-scheme: dark) {
+    body {
+        background-image: linear-gradient(to bottom, #585858 0%, #1B1B1B 51%);
+    }
+}
